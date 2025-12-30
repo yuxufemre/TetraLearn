@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TetraLearn - Modern Eğitim Platformu</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">İçeriğe Atla</a>
+
+    <header role="banner">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="TetraLearn Logo" id="logo">
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav id="mainNav" role="navigation" aria-label="Ana Menü">
+            <a href="#" class="nav-link active" onclick="showView('home')">Ana Sayfa</a>
+            <a href="#" class="nav-link" onclick="showView('team')">Ekibimiz</a>
+            <a href="#" class="nav-link" onclick="toggleMenu()">Bülten</a>
+            <a href="#" class="nav-link" onclick="showView('contact')">İletişim</a>
+            <a href="#" class="nav-link ai-nav-btn" onclick="showView('ai')"><i class="fa-solid fa-robot"
+                    aria-hidden="true"></i> AI
+                Asistan</a>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Tema Değiştir (Açık/Koyu)">
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+
+        <div id="homeView" class="view-section active">
+            <div class="hero-text">
+                <h1>Bilimi Keşfet, <br>Geleceği Tasarla.</h1>
+                <p>TetraLearn ile teknolojiyi, bilimi ve öğrenmeyi yeniden tanımlıyoruz. <br> Sen de bu yolculuğa katıl,
+                    <span class="hashtag">#TetraLearn</span> ile sınırları aş.
+                </p>
+            </div>
+
+            <section class="about-modern-section" id="about">
+                <div class="about-grid">
+                    <div class="about-content-col">
+                        <div class="about-badge">BİZ KİMİZ?</div>
+                        <h2 class="about-modern-title">Bilimi Herkes İçin <br> <span class="highlight-text">Erişilebilir
+                                Kılıyoruz.</span></h2>
+                        <p class="about-modern-desc">
+                            TetraLearn, "Bilimi herkes için daha anlaşılır kılabilir miyiz?" sorusuyla yola çıktı.
+                            Karmaşık teknolojileri sadeleştiriyor, yapay zeka destekli araçlarla öğrenme deneyimini
+                            kişiselleştiriyoruz.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">2025</span>
+                                <span class="stat-label">Kuruluş</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">AI</span>
+                                <span class="stat-label">Destekli</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-features-col">
+                        <div class="feature-card">
+                            <i class="fa-solid fa-lightbulb feature-icon"></i>
+                            <h3>Yenilikçi Yaklaşım</h3>
+                            <p>Eskimiş metotlar yerine, teknoloji destekli dinamik öğrenme.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-users feature-icon"></i>
+                            <h3>Topluluk Odaklı</h3>
+                            <p>Birlikte öğrenen, tartışan ve büyüyen bir ekosistem.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-rocket feature-icon"></i>
+                            <h3>Geleceğin Yetkinlikleri</h3>
+                            <p>Sadece bilgi değil, vizyon kazandıran içerikler.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery-section">
+                <h2 class="section-title">Tetra Hub</h2>
+                <div class="gallery-container-relative">
+                    <button class="gallery-nav-btn prev-btn" onclick="scrollGallery(-1)">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <div class="modern-gallery-wrapper">
+                        <div class="gallery-track">
+                            <div class="gallery-card">
+                                <img src="foto1.jpg" alt="Event 1">
+                                <div class="gallery-overlay">
+                                    <h3>8 Kasım STEM Günü Etkinliğimiz</h3>
+                                    <p>Geleceğin teknolojilerini tartışıyoruz.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-card">
+                                <img src="foto2.jpg" alt="Event 2">
+                                <div class="gallery-overlay">
+                                    <h3>Online Buluşmalar</h3>
+                                    <p>Sınırları aşan bilgi paylaşımı.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-card">
+                                <img src="foto3.jpg" alt="Event 3">
+                                <div class="gallery-overlay">
+                                    <h3>Ekip Ruhu</h3>
+                                    <p>Birlikte öğreniyoruz, birlikte büyüyoruz.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-card">
+                                <img src="foto4.jpg" alt="Event 4">
+                                <div class="gallery-overlay">
+                                    <h3>Instagram Hesabıbımızı Keşfettiniz Mi?</h3>
+                                    <p>Yeni bilgileri ve gelişmeleri takip etmek için Instagram hesabımızı takip edin!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="gallery-nav-btn next-btn" onclick="scrollGallery(1)">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <div id="teamView" class="view-section">
+            <div class="hero-text">
+                <h1>Ekibimizle Tanışın</h1>
+                <p>TetraLearn'ü hayata geçiren tutkulu beyinler.</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-img-wrapper"><img src="ceren.png" alt="Ceren Özen"></div>
+                    <div class="team-info">
+                        <h3 class="team-name">Ceren ÖZEN</h3>
+                        <div class="team-role">Kurucu</div>
+                        <p class="team-desc">Teknoloji ve eğitimi birleştirerek vizyoner projeler geliştiriyor.</p>
+                        <div class="team-social">
+                            <a href="https://www.linkedin.com/in/ceren%C3%B6zen/" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-img-wrapper"><img src="ece.jpg" alt="Ece Akyüz"></div>
+                    <div class="team-info">
+                        <h3 class="team-name">Ece AKYÜZ</h3>
+                        <div class="team-role">Eğitim Koordinatörü</div>
+                        <p class="team-desc">Eğitim süreçlerinin akıcı ve öğrenen odaklı olmasını sağlıyor.</p>
+                        <div class="team-social">
+                            <a href="https://www.linkedin.com/in/ece-aky%C3%BCz-9ba14528a/" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-img-wrapper"><img src="ilkay.jpg" alt="İlkay Yusufi"></div>
+                    <div class="team-info">
+                        <h3 class="team-name">İlkay YUSUFİ</h3>
+                        <div class="team-role">Dijital İletişim Koordinatörü</div>
+                        <p class="team-desc">Markanın dijital dünyadaki sesi ve stratejisti.</p>
+                        <div class="team-social">
+                            <a href="https://www.linkedin.com/in/ilkay-yusufi-b598b7182/" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-img-wrapper"><img src="yemre.png" alt="Yusuf Emre Öner"></div>
+                    <div class="team-info">
+                        <h3 class="team-name">Yusuf Emre ÖNER</h3>
+                        <div class="team-role">Teknoloji & AI Koordinatörü</div>
+                        <p class="team-desc">Yapay zeka altyapısını ve teknik sistemleri yönetiyor.</p>
+                        <div class="team-social">
+                            <a href="https://www.linkedin.com/in/yusuf-emre-oner/" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contactView" class="view-section">
+            <div class="hero-text">
+                <h1>İletişime Geçin</h1>
+                <p>Bir merhaba deyin veya projenizden bahsedin.</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>İletişim Bilgileri</h3>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>iletisim@tetralearn.co</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>@tetralearn</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>TetraLearn Company</span>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Adınız Soyadınız</label>
+                            <input type="text" name="name" class="form-control" placeholder="Adınız" required>
+                        </div>
+                        <div class="form-group">
+                            <label>E-posta Adresiniz</label>
+                            <input type="email" name="email" class="form-control" placeholder="ornek@mail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Mesajınız</label>
+                            <textarea name="message" class="form-control" placeholder="Mesajınızı buraya yazın..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">MESAJI GÖNDER</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="aiView" class="view-section">
+            <div class="ai-wrapper">
+                <i class="fa-solid fa-brain ai-icon-large"></i>
+                <h1 style="color: var(--primary-color); margin-bottom: 10px;">TetraLearn AI</h1>
+                <p style="color: #666;">Merak ettiğin her şeyi sor, yapay zeka senin için anlatsın.</p>
+
+                <div class="ai-input-group">
+                    <input type="text" id="userPrompt" class="ai-input" placeholder="Örn: Karadelikler nasıl oluşur?">
+                    <button onclick="askGemini()" class="ai-btn">
+                        <i class="fa-solid fa-paper-plane"></i> Gönder
+                    </button>
+                </div>
+
+                <div id="loading" style="display:none; margin-top:20px; color: var(--accent-color);">
+                    <i class="fa-solid fa-circle-notch fa-spin fa-2x"></i>
+                    <p style="margin-top:10px;">Düşünüyor...</p>
+                </div>
+
+                <div id="aiResult" class="ai-result"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3 style="font-family: 'Merriweather', serif;">TetraLearn</h3>
+                <p style="color: #bdc3c7; line-height: 1.6;">Eğitimi teknolojiyle buluşturuyor, geleceğin öğrenme
+                    deneyimini bugünden tasarlıyoruz.</p>
+            </div>
+            <div class="footer-col" style="padding-left: 20px;">
+                <h3>Hızlı Erişim</h3>
+                <ul class="footer-links">
+                    <li><a href="#index.html" onclick="showView('home')">Ana Sayfa</a></li>
+                    <li><a href="#" onclick="showView('team')">Ekibimiz</a></li>
+                    <li><a href="#" onclick="showView('contact')">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Bizi Takip Edin</h3>
+                <div class="team-social" style="display: flex; gap: 15px;">
+                    <a href="https://www.instagram.com/tetralearn" style="color:white;"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/tetralearn" style="color:white;"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.tiktok.com/@tetralearn" style="color:white;"><i
+                            class="fa-brands fa-tiktok"></i></a>
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 TetraLearn. Tüm hakları saklıdır.
+            </div>
+    </footer>
+
+    <script>
+        function showView(viewId) {
+            document.querySelectorAll('.view-section').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            const target = document.getElementById(viewId + 'View');
+            if (target) target.classList.add('active');
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            if (window.innerWidth <= 1024) {
+                document.getElementById('mainNav').classList.remove('active');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMenu() {
+            document.getElementById('mainNav').classList.toggle('active');
+        }
+
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const btn = contactForm.querySelector('button');
+                const originalText = btn.innerText;
+
+                btn.disabled = true;
+                btn.innerText = "Gönderiliyor...";
+
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData.entries());
+
+                try {
+                    const res = await fetch('http://localhost:3000/api/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+                    const result = await res.json();
+                    if (result.result === 'success' || res.ok) {
+                        alert("Mesajınız başarıyla gönderildi!");
+                        contactForm.reset();
+                    } else {
+                        throw new Error(result.error);
+                    }
+                } catch (err) {
+                    alert("Hata oluştu: " + err.message);
+                } finally {
+                    btn.disabled = false;
+                    btn.innerText = originalText;
+                }
+            });
+        }
+
+        async function askGemini() {
+            const input = document.getElementById('userPrompt');
+            const resultArea = document.getElementById('aiResult');
+            const loading = document.getElementById('loading');
+            const prompt = input.value.trim();
+
+            if (!prompt) return alert("Lütfen bir soru sorun!");
+
+            resultArea.style.display = 'none';
+            loading.style.display = 'block';
+
+            try {
+                const res = await fetch('http://localhost:3000/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt })
+                });
+                const data = await res.json();
+
+                if (!res.ok) throw new Error(data.error || 'Hata');
+
+                resultArea.innerHTML = `<strong>TETRA AI:</strong><br>${data.reply.replace(/\n/g, '<br>')}`;
+                resultArea.style.display = 'block';
+            } catch (err) {
+                resultArea.innerHTML = `<span style='color:red;'>Hata: ${err.message}</span>`;
+                resultArea.style.display = 'block';
+            } finally {
+                loading.style.display = 'none';
+            }
+        }
+
+        function scrollGallery(direction) {
+            const wrapper = document.querySelector('.modern-gallery-wrapper');
+            const scrollAmount = 330;
+            wrapper.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+
+        const themeBtn = document.querySelector('.theme-toggle i');
+        const logo = document.getElementById('logo');
+
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeBtn.classList.replace('fa-sun', 'fa-moon');
+                logo.src = 'logo.jpg';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeBtn.classList.replace('fa-moon', 'fa-sun');
+                logo.src = 'darklogo.png';
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                themeBtn.classList.replace('fa-moon', 'fa-sun');
+                logo.src = 'darklogo.png';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
