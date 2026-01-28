@@ -472,7 +472,7 @@ main {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 40px;
     padding: 20px 0;
@@ -656,6 +656,7 @@ main {
     gap: 15px;
     margin-bottom: 25px;
     font-size: 1.1rem;
+    transition: all 0.3s ease;
 }
 
 .info-item i {
@@ -667,6 +668,17 @@ main {
     justify-content: center;
     border-radius: 50%;
     color: var(--accent-color);
+}
+
+.info-item:hover {
+    transform: translateX(10px);
+    opacity: 0.9;
+}
+
+.info-item:hover i {
+    background: white;
+    color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .contact-form-wrapper {

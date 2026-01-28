@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <link rel="icon" type="image/jpg" href="logo.jpg">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -27,9 +28,10 @@
             <i class="fa-solid fa-bars"></i>
         </div>
         <nav id="mainNav" role="navigation" aria-label="Ana Menü">
-            <a href="#" class="nav-link active" onclick="showView('home')">Ana Sayfa</a>
+            <a href="#" class="nav-link" onclick="showView('home')">Ana Sayfa</a>
+            <a href="#" class="nav-link" onclick="showView('about')">Hakkımızda</a>
             <a href="#" class="nav-link" onclick="showView('team')">Ekibimiz</a>
-            <a href="#" class="nav-link" onclick="toggleMenu()">Bülten</a>
+            <a href="#" class="nav-link" onclick="showView('education')">Eğitimlerimiz</a>
             <a href="#" class="nav-link" onclick="showView('contact')">İletişim</a>
             <a href="#" class="nav-link ai-nav-btn" onclick="showView('ai')"><i class="fa-solid fa-robot"
                     aria-hidden="true"></i> AI
@@ -41,6 +43,41 @@
     </header>
 
     <main id="main-content" role="main">
+
+        <div id="aboutView" class="view-section">
+            <div class="hero-text">
+                <h1>Hakkımızda</h1>
+                <p>Hikayemiz ve vizyonumuz.</p>
+            </div>
+            <div class="about-card" style="max-width: 900px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem;">
+                <p style="margin-bottom: 20px;">
+                    <strong style="color: var(--primary-color); font-size: 1.3rem;">TetraLearn</strong>, 2025 yılında
+                    <em style="color: var(--accent-color);">“Bilimi herkes için daha anlaşılır, daha güncel ve daha
+                        erişilebilir kılabilir miyiz?”</em> sorusuyla doğdu. Eğitim, bilim ve teknolojiye duyduğumuz
+                    heyecanla; çevrim içi eğitim içerikleri, bilim iletişimi ve dijital öğrenme deneyimleri
+                    tasarlıyoruz.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    Bizim için öğrenme; yalnızca bilgiyi aktarmak değil, öğrenenin o bilgiyi gerçekten anlayabileceği
+                    bir yol açmak demek. Bu yüzden TetraLearn’de yaptığımız şey sadece eğitim oluşturmak değil; <strong
+                        style="color: var(--primary-color);">öğrenme deneyiminin tamamını tasarlamak.</strong> Yani
+                    karmaşık konuları sadeleştiriyor, bilimsel doğruluğu koruyor ve herkesin adım adım ilerleyebileceği
+                    anlaşılır bir öğrenme yolculuğu sunuyoruz.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    Bugün TetraLearn, erişilebilir içerikler ve yapay zekâ destekli öğrenme çözümleriyle büyüyen bir
+                    eğitim teknolojileri ekosistemi olarak yoluna devam ediyor. Amacımız, bilimi ve öğrenmeyi zamandan,
+                    mekândan ve karmaşıklıktan bağımsız hâle getirmek.
+                </p>
+                <p style="margin-bottom: 20px; font-weight: 600;">
+                    Öğrenme doğru şekilde sunulduğunda, herkes için ilham veren bir yolculuğa dönüşür.
+                </p>
+                <p
+                    style="text-align: center; font-size: 1.4rem; color: var(--accent-color); font-family: var(--font-heading); margin-top: 30px;">
+                    Biz de o yolculukta ışığı açan tarafta olmayı seviyoruz. ✨💌
+                </p>
+            </div>
+        </div>
 
         <div id="homeView" class="view-section active">
             <div class="hero-text">
@@ -66,10 +103,7 @@
                                 <span class="stat-number">2025</span>
                                 <span class="stat-label">Kuruluş</span>
                             </div>
-                            <div class="stat-item">
-                                <span class="stat-number">AI</span>
-                                <span class="stat-label">Destekli</span>
-                            </div>
+
                         </div>
                     </div>
                     <div class="about-features-col">
@@ -159,18 +193,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card">
-                    <div class="team-img-wrapper"><img src="ece.jpg" alt="Ece Akyüz"></div>
-                    <div class="team-info">
-                        <h3 class="team-name">Ece AKYÜZ</h3>
-                        <div class="team-role">Eğitim Koordinatörü</div>
-                        <p class="team-desc">Eğitim süreçlerinin akıcı ve öğrenen odaklı olmasını sağlıyor.</p>
-                        <div class="team-social">
-                            <a href="https://www.linkedin.com/in/ece-aky%C3%BCz-9ba14528a/" target="_blank"><i
-                                    class="fa-brands fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="team-card">
                     <div class="team-img-wrapper"><img src="ilkay.jpg" alt="İlkay Yusufi"></div>
                     <div class="team-info">
@@ -187,7 +210,7 @@
                     <div class="team-img-wrapper"><img src="yemre.png" alt="Yusuf Emre Öner"></div>
                     <div class="team-info">
                         <h3 class="team-name">Yusuf Emre ÖNER</h3>
-                        <div class="team-role">Teknoloji & AI Koordinatörü</div>
+                        <div class="team-role">Yapay Zeka Koordinatörü</div>
                         <p class="team-desc">Yapay zeka altyapısını ve teknik sistemleri yönetiyor.</p>
                         <div class="team-social">
                             <a href="https://www.linkedin.com/in/yusuf-emre-oner/" target="_blank"><i
@@ -198,27 +221,46 @@
             </div>
         </div>
 
+        <div id="educationView" class="view-section">
+            <div class="hero-text"
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 50vh;">
+                <h1 style="margin-bottom: 20px;">Eğitimlerimiz</h1>
+                <p style="font-size: 2rem; color: var(--accent-color); font-weight: 800; margin-bottom: 20px;">Çok
+                    Yakında Sizlerle!</p>
+                <i class="fa-solid fa-rocket"
+                    style="font-size: 4rem; color: var(--primary-color); animation: float 3s ease-in-out infinite;"></i>
+            </div>
+        </div>
+
         <div id="contactView" class="view-section">
             <div class="hero-text">
                 <h1>İletişime Geçin</h1>
-                <p>Bir merhaba deyin veya projenizden bahsedin.</p>
+                <p>Bir merhaba deyin veya bize geri bildirimde bulunun.</p>
             </div>
 
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>İletişim Bilgileri</h3>
-                    <div class="info-item">
+                    <a href="mailto:iletisim@tetralearn.co" class="info-item"
+                        style="color: white; text-decoration: none;">
                         <i class="fa-solid fa-envelope"></i>
                         <span>iletisim@tetralearn.co</span>
-                    </div>
-                    <div class="info-item">
+                    </a>
+                    <a href="https://www.instagram.com/tetralearn" target="_blank" class="info-item"
+                        style="color: white; text-decoration: none;">
                         <i class="fa-brands fa-instagram"></i>
                         <span>@tetralearn</span>
-                    </div>
-                    <div class="info-item">
+                    </a>
+                    <a href="https://www.linkedin.com/company/tetralearn" target="_blank" class="info-item"
+                        style="color: white; text-decoration: none;">
                         <i class="fa-brands fa-linkedin"></i>
                         <span>TetraLearn Company</span>
-                    </div>
+                    </a>
+                    <a href="https://www.tiktok.com/@tetralearn" target="_blank" class="info-item"
+                        style="color: white; text-decoration: none;">
+                        <i class="fa-brands fa-tiktok"></i>
+                        <span>@tetralearn</span>
+                    </a>
                 </div>
 
                 <div class="contact-form-wrapper">
